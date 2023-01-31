@@ -9,10 +9,11 @@ use Monolog\Logger;
 class TelegramLoggingHandler extends AbstractProcessingHandler {
 
 
-    protected int $chatId;
+    protected string $chatId;
     protected string $token;
 
     public function __construct( array $config ) {
+
         $level = Logger::toMonologLevel( $config['level'] );
         parent::__construct( $level );
 

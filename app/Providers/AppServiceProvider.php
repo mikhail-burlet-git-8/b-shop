@@ -26,24 +26,38 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        Model::preventLazyLoading( ! app()->isProduction() );
-        Model::preventSilentlyDiscardingAttributes( ! app()->isProduction() );
 
-        DB::whenQueryingForLongerThan( 500, function ( Connection $connection ) {
-            logger()
-                ->channel( 'telegram' )
-                ->debug( 'whenQueryingForLongerThan: ' . $connection->query()->toSql() );
-        } );
+        Model::shouldBeStrict( ! app()->isProduction() );
 
-        $kernel = app( Kernel::class );
-        $kernel->whenRequestLifecycleIsLongerThan(
-            CarbonInterval::second( 4 ),
-            function () {
+        if ( app()->isProduction() ) {
+
+            DB::whenQueryingForLongerThan( CarbonInterval::second( 5 ), function ( Connection $connection ) {
                 logger()
                     ->channel( 'telegram' )
-                    ->debug( 'whenRequestLifecycleIsLongerThan: ' . request()->url() );
-            }
-        );
+                    ->debug( 'whenQueryingForLongerThan: ' . $connection->totalQueryDuration() );
+            } );
+
+            DB::listen( function ( $query ) {
+                if ( $query->time > 100 ) {
+                    logger()
+                        ->channel( 'telegram' )
+                        ->debug( 'whenQueryingForLongerThan: ' . $query->sql, $query->bindings );
+                }
+
+                dump( $query->time );
+            } );
+
+
+            $kernel = app( Kernel::class );
+            $kernel->whenRequestLifecycleIsLongerThan(
+                CarbonInterval::second( 4 ),
+                function () {
+                    logger()
+                        ->channel( 'telegram' )
+                        ->debug( 'whenRequestLifecycleIsLongerThan: ' . request()->url() );
+                }
+            );
+        }
 
     }
 }

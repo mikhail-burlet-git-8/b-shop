@@ -1,11 +1,11 @@
 {
-  "resources/fonts/Gilroy-Regular.woff2": {
-    "file": "assets/Gilroy-Regular-8ae963ef.woff2",
-    "src": "resources/fonts/Gilroy-Regular.woff2"
-  },
   "resources/fonts/Gilroy-Medium.woff2": {
     "file": "assets/Gilroy-Medium-e61f2165.woff2",
     "src": "resources/fonts/Gilroy-Medium.woff2"
+  },
+  "resources/fonts/Gilroy-Regular.woff2": {
+    "file": "assets/Gilroy-Regular-8ae963ef.woff2",
+    "src": "resources/fonts/Gilroy-Regular.woff2"
   },
   "resources/fonts/Gilroy-SemiBold.woff2": {
     "file": "assets/Gilroy-SemiBold-d8e57f7f.woff2",
@@ -19,22 +19,14 @@
     "file": "assets/Gilroy-Bold-05391b44.woff2",
     "src": "resources/fonts/Gilroy-Bold.woff2"
   },
-  "resources/images/icons/dropdown-arrow.svg": {
-    "file": "assets/dropdown-arrow-dfa6ea0c.svg",
-    "src": "resources/images/icons/dropdown-arrow.svg"
-  },
-  "resources/images/icons/checked-white.svg": {
-    "file": "assets/checked-white-e3fb40c7.svg",
-    "src": "resources/images/icons/checked-white.svg"
-  },
-  "resources/css/app.css": {
-    "file": "assets/app-a646cd10.css",
-    "src": "resources/css/app.css",
+  "resources/sass/main.sass": {
+    "file": "assets/main-d2800713.css",
+    "src": "resources/sass/main.sass",
     "isEntry": true
   },
-  "resources/sass/main.sass": {
-    "file": "assets/main-cfefacf0.css",
-    "src": "resources/sass/main.sass",
+  "resources/css/app.css": {
+    "file": "assets/app-131c907f.css",
+    "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
