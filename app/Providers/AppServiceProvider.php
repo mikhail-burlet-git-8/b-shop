@@ -25,18 +25,11 @@ class AppServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot() {
+    public function boot(): void {
 
         Model::shouldBeStrict( ! app()->isProduction() );
 
         if ( app()->isProduction() ) {
-
-            DB::whenQueryingForLongerThan( CarbonInterval::second( 5 ), function ( Connection $connection ) {
-                logger()
-                    ->channel( 'telegram' )
-                    ->debug( 'whenQueryingForLongerThan: ' . $connection->totalQueryDuration() );
-            } );
-
             DB::listen( function ( $query ) {
                 if ( $query->time > 100 ) {
                     logger()
@@ -47,9 +40,7 @@ class AppServiceProvider extends ServiceProvider {
                 dump( $query->time );
             } );
 
-
-            $kernel = app( Kernel::class );
-            $kernel->whenRequestLifecycleIsLongerThan(
+            app( Kernel::class )->whenRequestLifecycleIsLongerThan(
                 CarbonInterval::second( 4 ),
                 function () {
                     logger()
