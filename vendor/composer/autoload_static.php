@@ -37,6 +37,7 @@ class ComposerStaticInitff5ba28244649b12e2c80a888fc54f02
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        '381c1f7485be5ec909ca0fe1ede4b928' => __DIR__ . '/../..' . '/app/Helpers/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -608,8 +609,10 @@ class ComposerStaticInitff5ba28244649b12e2c80a888fc54f02
 
     public static $classMap = array (
         'App\\Console\\Commands\\InstallCommand' => __DIR__ . '/../..' . '/app/Console/Commands/InstallCommand.php',
+        'App\\Console\\Commands\\RefreshCommand' => __DIR__ . '/../..' . '/app/Console/Commands/RefreshCommand.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Faker\\FakerImageProvider' => __DIR__ . '/../..' . '/app/Faker/FakerImageProvider.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

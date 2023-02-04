@@ -2,29 +2,26 @@
 
 namespace App\Providers;
 
-use Carbon\Carbon;
+use App\Faker\FakerImageProvider;
 use Carbon\CarbonInterval;
+use Faker\Factory;
+use Faker\Generator;
 use Illuminate\Contracts\Http\Kernel;
-use Illuminate\Database\Connection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register() {
-        //
+
+    public function register(): void {
+        $this->app->singleton( Generator::class, function () {
+            $faker = Factory::create();
+            $faker->addProvider( new FakerImageProvider( $faker ) );
+
+            return $faker;
+        } );
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot(): void {
 
         Model::shouldBeStrict( ! app()->isProduction() );

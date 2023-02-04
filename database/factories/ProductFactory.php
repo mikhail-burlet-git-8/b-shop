@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Faker\FakerImageProvider;
 use App\Models\Brand;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -14,7 +15,7 @@ class ProductFactory extends Factory {
             'title'     => ucfirst( $this->faker->words( 2, true ) ),
             'price'     => $this->faker->numberBetween( 1000, 100000 ),
             'brand_id'  => Brand::query()->inRandomOrder()->value( 'id' ),
-            'thumbnail' => '',
+            'thumbnail' => $this->faker->loremImage( '/storage/images/products' ),
         ];
     }
 }
