@@ -8,9 +8,9 @@ Route::get( '/', HomeController::class )->name( 'home' );
 
 Route::controller( AuthController::class )->group( function () {
     Route::get( '/login', 'login' )->name( 'login' );
-    Route::post( '/login', 'signIn' )->name( 'signIn' );
+    Route::post( '/login', 'signIn' )->name( 'signIn' )->middleware( 'throttle:auth' );;
     Route::get( '/sign-up', 'signUp' )->name( 'signUp' );
-    Route::post( '/sign-up', 'store' )->name( 'store' );
+    Route::post( '/sign-up', 'store' )->name( 'store' )->middleware( 'throttle:auth' );;
     Route::get( '/reset-password', 'resetPassword' )->name( 'resetPassword' );
     Route::delete( '/logout', 'logOut' )->name( 'logOut' );
 

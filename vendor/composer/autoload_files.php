@@ -36,5 +36,5 @@ return array(
     '4a1f389d6ce373bda9e57857d3b61c84' => $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     '320163ac6b93aebe3dc25b60a0533d56' => $vendorDir . '/spatie/laravel-ignition/src/helpers.php',
-    '381c1f7485be5ec909ca0fe1ede4b928' => $baseDir . '/app/Helpers/Helpers.php',
+    'e72ebc77186502261c72638d540539e9' => $baseDir . '/app/Supports/Helpers.php',
 );

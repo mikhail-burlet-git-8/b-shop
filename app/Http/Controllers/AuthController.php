@@ -18,6 +18,10 @@ use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller {
     public function login() {
+        flash()->info( 'test' );
+
+        //return redirect( '/' );
+
         return view( 'auth.login' );
     }
 

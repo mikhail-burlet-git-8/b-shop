@@ -37,7 +37,7 @@ class ComposerStaticInitff5ba28244649b12e2c80a888fc54f02
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
-        '381c1f7485be5ec909ca0fe1ede4b928' => __DIR__ . '/../..' . '/app/Helpers/Helpers.php',
+        'e72ebc77186502261c72638d540539e9' => __DIR__ . '/../..' . '/app/Supports/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -657,7 +657,10 @@ class ComposerStaticInitff5ba28244649b12e2c80a888fc54f02
         'App\\Providers\\ViewServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ViewServiceProvider.php',
         'App\\Services\\Telegram\\Exception\\TelegramApiException' => __DIR__ . '/../..' . '/app/Services/Telegram/Exception/TelegramApiException.php',
         'App\\Services\\Telegram\\TelegramBotApi' => __DIR__ . '/../..' . '/app/Services/Telegram/TelegramBotApi.php',
+        'App\\Supports\\Flash\\Flash' => __DIR__ . '/../..' . '/app/Supports/Flash/Flash.php',
+        'App\\Supports\\Flash\\FlashMessage' => __DIR__ . '/../..' . '/app/Supports/Flash/FlashMessage.php',
         'App\\Traits\\Models\\HasSlug' => __DIR__ . '/../..' . '/app/Traits/Models/HasSlug.php',
+        'App\\Traits\\Models\\HasSlugMyVersion' => __DIR__ . '/../..' . '/app/Traits/Models/HasSlugMyVersion.php',
         'App\\View\\Components\\Forms\\Error' => __DIR__ . '/../..' . '/app/View/Components/Forms/Error.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Barryvdh\\Debugbar\\Console\\ClearCommand' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Console/ClearCommand.php',

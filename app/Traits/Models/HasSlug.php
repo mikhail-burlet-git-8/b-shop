@@ -9,26 +9,47 @@ trait HasSlug {
 
     protected static function bootHasSlug(): void {
         static::creating( function ( Model $item ) {
-            $item->slug = self::checkSlug( $item );
+            $item->makeSlug();
         } );
     }
 
-    public static function checkSlug( $item, $index = 0 ): string {
-        $slug = $item->slug ?? str( $item->{self::slugFrom()} )->slug();
-        if ( $index > 0 ) {
-            $slug .= '-' . $index;
-        }
-        if ( $item->where( 'slug', $slug )->exists() ) {
+    protected function makeSlug(): void {
+        $slug = $this->slugUnique(
+            str( $this->{$this->slugFrom()} )->slug()->value()
+        );
+
+        $this->{$this->slugColumn()} = $this->{$this->slugColumn()} ?? $slug;
+    }
+
+    private function slugUnique( string $slug ): string {
+
+        $originalSlug = $slug;
+        $index        = 0;
+
+        while ( $this->isSlugExists( $slug ) ) {
             $index ++;
 
-            return self::checkSlug( $item, $index );
+            $slug = $originalSlug . '-' . $index;
         }
 
         return $slug;
     }
 
+    private function isSlugExists( string $slug ): string {
+
+        $query = $this->newQuery()
+                      ->where( self::slugColumn(), $slug )
+                      ->where( $this->getKeyName(), '!=', $this->getKey() )
+                      ->withoutGlobalScopes();
+
+        return $query->exists();
+    }
 
     public static function slugFrom(): string {
         return 'title';
+    }
+
+    public static function slugColumn(): string {
+        return 'slug';
     }
 }

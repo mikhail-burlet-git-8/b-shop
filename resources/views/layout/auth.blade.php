@@ -11,8 +11,10 @@
     ])
 </head>
 <body>
-@if(session()->has('message'))
-    {{session('message')}}
+@if($message = flash()->get())
+    <div class="{{$message->class()}}">
+        {{$message->message()}}
+    </div>
 @endif
 @yield('content')
 </body>
