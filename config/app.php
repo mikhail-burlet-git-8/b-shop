@@ -1,6 +1,5 @@
 <?php
 
-use App\Providers\ViewServiceProvider;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -70,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe\Moscow',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -182,8 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        ViewServiceProvider::class,
-
+        App\Providers\ViewServiceProvider::class,
+        App\Providers\DomainServiceProvider::class,
         /*
          * Package Service Providers...
          */

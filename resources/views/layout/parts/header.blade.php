@@ -69,7 +69,7 @@
                             </ul>
                         </div>
                         <div class="mt-6">
-                            <form method="post" action="{{route('logOut')}}">
+                            <form method="post" action="{{route('logout')}}">
                                 @method('delete')
                                 @csrf
                                 <button type="submit"

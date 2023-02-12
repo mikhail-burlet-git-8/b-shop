@@ -35,7 +35,7 @@ final class Client implements ClientInterface
     /**
      * The version of the SDK.
      */
-    public const SDK_VERSION = '3.12.1';
+    public const SDK_VERSION = '3.13.1';
 
     /**
      * @var Options The client options
@@ -383,7 +383,7 @@ final class Client implements ClientInterface
             $exceptions[] = new ExceptionDataBag(
                 $exception,
                 $this->stacktraceBuilder->buildFromException($exception),
-                $hint->mechanism ?? new ExceptionMechanism(ExceptionMechanism::TYPE_GENERIC, true)
+                $hint->mechanism ?? new ExceptionMechanism(ExceptionMechanism::TYPE_GENERIC, true, ['code' => $exception->getCode()])
             );
         } while ($exception = $exception->getPrevious());
 

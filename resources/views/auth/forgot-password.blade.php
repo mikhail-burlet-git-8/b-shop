@@ -14,7 +14,7 @@
                          alt="CutCode">
                 </a>
             </div>
-            <x-forms.auth-forms title="Забыли пароль" action="{{route('forgotPassword')}}" method="post">
+            <x-forms.auth-forms title="Забыли пароль" action="{{route('forgot.handle')}}" method="post">
                 @csrf
                 <x-forms.text-input
                     type="email"
@@ -41,7 +41,7 @@
                             </a>
                         </div>
                         <div class="text-xxs md:text-xs">
-                            <a href="{{route('login')}}"
+                            <a href="{{route('login.page')}}"
                                class="text-white hover:text-white/70 font-bold">Вспомнил пароль</a>
                         </div>
                     </div>

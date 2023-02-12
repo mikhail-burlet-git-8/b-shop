@@ -11,11 +11,7 @@
     ])
 </head>
 <body>
-@if($message = flash()->get())
-    <div class="{{$message->class()}}">
-        {{$message->message()}}
-    </div>
-@endif
+<x-flash></x-flash>
 @yield('content')
 </body>
 

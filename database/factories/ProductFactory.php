@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Faker\FakerImageProvider;
 use App\Models\Brand;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

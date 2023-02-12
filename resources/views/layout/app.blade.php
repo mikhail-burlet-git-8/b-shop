@@ -12,11 +12,7 @@
 </head>
 <body>
 
-@if($message = flash()->get())
-    <div class="{{$message->class()}}">
-        {{$message->message()}}
-    </div>
-@endif
+<x-flash></x-flash>
 @include('layout.parts.header')
 @yield('content')
 @include('layout.parts.footer')

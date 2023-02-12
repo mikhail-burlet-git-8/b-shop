@@ -10,11 +10,11 @@
                 <a href="/" class="inline-block" rel="home">
                     <img src="{{Vite::image('logo.svg')}}"
                          class="w-[148px] md:w-[201px] h-[36px] md:h-[50px]"
-                         alt="CutCode">
+                         alt="">
                 </a>
             </div>
 
-            <x-forms.auth-forms title="Регистрация" method="post" action="{{route('store')}}">
+            <x-forms.auth-forms title="Регистрация" method="post" action="{{route('register.handle')}}">
                 @csrf
                 @method('post')
                 <x-forms.text-input
@@ -68,7 +68,7 @@
 
                 <x-slot:socialAuth>
                     <ul class="space-y-3 mt-3">
-                        <li><a href="{{route('socialite.github')}}"
+                        <li><a href="{{route('socialite.redirect', 'github')}}"
                                class="relative flex items-center h-14 px-12 rounded-lg border border-[#A07BF0] bg-white/20 hover:bg-white/20 active:bg-white/10 active:translate-y-0.5">
                                 <svg class="shrink-0 absolute left-4 w-5 sm:w-6 h-5 sm:h-6"
                                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -83,7 +83,7 @@
                 <x-slot:buttons>
                     <div class="space-y-3 mt-5">
                         <div class="text-xxs md:text-xs">Есть аккаунт?
-                            <a href="{{route('login')}}"
+                            <a href="{{route('login.page')}}"
                                class="text-white hover:text-white/70 font-bold underline underline-offset-4">Войти</a>
                         </div>
                     </div>

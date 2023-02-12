@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard'     => 'web',
         'passwords' => 'users',
     ],
 
@@ -37,7 +37,7 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver'   => 'session',
             'provider' => 'users',
         ],
     ],
@@ -62,7 +62,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model'  => \Domain\Auth\Models\User::class,
         ],
 
         // 'users' => [
@@ -89,9 +89,9 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
+            'table'    => 'password_resets',
+            'expire'   => 1,
+            'throttle' => 1,
         ],
     ],
 
@@ -106,6 +106,8 @@ return [
     |
     */
 
-    'password_timeout' => 10800,
+    'password_timeout' => 10,
+    //'password_timeout' => 10800,
+
 
 ];

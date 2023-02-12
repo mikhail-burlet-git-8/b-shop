@@ -14,6 +14,7 @@
                          alt="CutCode">
                 </a>
             </div>
+
             <x-forms.auth-forms title="Восстановление пароля" action="{{route('password.update')}}" method="post">
                 @csrf
                 <input type="hidden" name="token" value="{{$token}}">
