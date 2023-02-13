@@ -18,8 +18,10 @@ class PasswordResetFormRequest extends FormRequest {
     }
 
     public function messages(): array {
+
         return [
             'email.required'     => 'Поле обязательно для заполнения',
+            'email.email'        => 'Мы не можем найти пользователя с таким адресом электронной почты',
             'password.required'  => 'Поле обязательно для заполнения',
             'password.min'       => 'Минимальное количество знаков 8',
             'password.confirmed' => 'Пароли не совпадают',

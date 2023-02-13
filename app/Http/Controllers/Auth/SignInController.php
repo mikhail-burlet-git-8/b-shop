@@ -16,6 +16,7 @@ class SignInController extends Controller {
     }
 
     public function handle( SignInFormRequest $request ): RedirectResponse {
+
         if ( ! auth()->attempt( $request->validated() ) ) {
             return back()->withErrors( [
                 'email' => 'Предоставленные учетные данные не соответствуют нашим записям.',

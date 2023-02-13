@@ -53,6 +53,7 @@ class RouteServiceProvider extends ServiceProvider {
     }
 
     protected function mapRoutes( Registrar $router, array $registrars ) {
+
         foreach ( $registrars as $registrar ) {
             if ( ! class_exists( $registrar ) || is_subclass_of( $registrar, RouteRegistrar::class ) ) {
                 throw new RuntimeException( sprintf(
@@ -60,7 +61,6 @@ class RouteServiceProvider extends ServiceProvider {
                     $registrar
                 ) );
             }
-
             ( new $registrar )->map( $router );
 
         }
