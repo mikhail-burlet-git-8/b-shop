@@ -2,12 +2,9 @@
 
 namespace Tests\Feature\App\Http\Controllers;
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ThumbnailController;
-use Database\Factories\BrandFactory;
-use Database\Factories\CategoryFactory;
 use Database\Factories\ProductFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
@@ -27,6 +24,7 @@ class ThumbnailControllerTest extends TestCase {
 
         $response->assertOk();
 
+        $storage->assertExists( "products/$product->id/$method/$size/" . File::basename( $product->thumbnail ) );
 
     }
 

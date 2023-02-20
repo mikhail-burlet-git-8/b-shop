@@ -12,7 +12,7 @@ abstract class TestCase extends BaseTestCase {
 
     protected function setUp(): void {
         parent::setUp();
-
+        Storage::fake();
         Notification::fake();
         // Запрет реальных завпросов в тестах
         Http::preventStrayRequests();
