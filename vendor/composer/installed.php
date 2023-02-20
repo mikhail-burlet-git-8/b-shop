@@ -7,6 +7,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< Updated upstream
+=======
+        'reference' => 'c5a99ec48a1aea20c3a02b03cdb277c364955f18',
+        'name' => 'laravel/laravel',
+>>>>>>> Stashed changes
         'dev' => true,
     ),
     'versions' => array(
@@ -412,10 +417,17 @@
         'laravel/framework' => array(
             'pretty_version' => 'v9.52.0',
             'version' => '9.52.0.0',
+<<<<<<< Updated upstream
             'reference' => 'eb85cd9d72e5bfa54b4d0d9040786f26d6184a9e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/framework',
             'aliases' => array(),
+=======
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/framework',
+            'aliases' => array(),
+            'reference' => 'eb85cd9d72e5bfa54b4d0d9040786f26d6184a9e',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
@@ -425,24 +437,42 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< Updated upstream
+=======
+            'reference' => 'c5a99ec48a1aea20c3a02b03cdb277c364955f18',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
             'pretty_version' => 'v1.5.0',
             'version' => '1.5.0.0',
+<<<<<<< Updated upstream
             'reference' => 'e0a8cef58b74662f27355be9cdea0e726bbac362',
             'type' => 'project',
             'install_path' => __DIR__ . '/../laravel/pint',
             'aliases' => array(),
+=======
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../laravel/pint',
+            'aliases' => array(),
+            'reference' => 'e0a8cef58b74662f27355be9cdea0e726bbac362',
+>>>>>>> Stashed changes
             'dev_requirement' => true,
         ),
         'laravel/sail' => array(
             'pretty_version' => 'v1.20.2',
             'version' => '1.20.2.0',
+<<<<<<< Updated upstream
             'reference' => '5ae072b182b1efbec927409e8a3ce3b1078cc42c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),
+=======
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/sail',
+            'aliases' => array(),
+            'reference' => '5ae072b182b1efbec927409e8a3ce3b1078cc42c',
+>>>>>>> Stashed changes
             'dev_requirement' => true,
         ),
         'laravel/sanctum' => array(
@@ -475,10 +505,17 @@
         'laravel/telescope' => array(
             'pretty_version' => 'v4.13.2',
             'version' => '4.13.2.0',
+<<<<<<< Updated upstream
             'reference' => '34a259cf19a73cc3b9b31f49c3c85595afcfbb70',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/telescope',
             'aliases' => array(),
+=======
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/telescope',
+            'aliases' => array(),
+            'reference' => '34a259cf19a73cc3b9b31f49c3c85595afcfbb70',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -493,10 +530,17 @@
         'league/commonmark' => array(
             'pretty_version' => '2.3.9',
             'version' => '2.3.9.0',
+<<<<<<< Updated upstream
             'reference' => 'c1e114f74e518daca2729ea8c4bf1167038fa4b5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/commonmark',
             'aliases' => array(),
+=======
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/commonmark',
+            'aliases' => array(),
+            'reference' => 'c1e114f74e518daca2729ea8c4bf1167038fa4b5',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'league/config' => array(
@@ -509,12 +553,21 @@
             'dev_requirement' => false,
         ),
         'league/flysystem' => array(
+<<<<<<< Updated upstream
             'pretty_version' => '3.12.2',
             'version' => '3.12.2.0',
             'reference' => 'f6377c709d2275ed6feaf63e44be7a7162b0e77f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/flysystem',
             'aliases' => array(),
+=======
+            'pretty_version' => '3.12.3',
+            'version' => '3.12.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/flysystem',
+            'aliases' => array(),
+            'reference' => '81e87e74dd5213795c7846d65089712d2dda90ce',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'league/mime-type-detection' => array(
