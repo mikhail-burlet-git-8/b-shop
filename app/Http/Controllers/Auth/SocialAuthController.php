@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Domain\Auth\Models\SocialAuth;
 use Domain\Auth\Models\User;
 use DomainException;
 use Illuminate\Http\RedirectResponse;
@@ -20,19 +21,38 @@ class SocialAuthController extends Controller {
 
     public function callback( string $driver ): RedirectResponse {
 
+        $allowed_driver = [
+            'vkontakte',
+            'github',
+        ];
 
-        if ( $driver !== 'github' ) {
+        if ( ! in_array( $driver, config( 'auth.allowed_driver' ) ) ) {
             throw new DomainException( 'Драйвер не поддерживается' );
         }
 
-        $githubUser = Socialite::driver( $driver )->user();
+        $socialUser = Socialite::driver( $driver )->user();
 
-        $user = User::query()->updateOrCreate( [
-            $driver . '_id' => $githubUser->getId(),
-        ], [
-            'name'     => $githubUser->getName() ?? $githubUser->getNickname() ?? $githubUser->getId(),
-            'email'    => $githubUser->getEmail(),
+        $socialId = SocialAuth::query()
+                              ->where( 'social_id', $socialUser->getId() )
+                              ->first();
+
+        if ( $socialId ) {
+            $user = $socialId->user;
+
+            auth()->login( $user );
+
+            return redirect()->intended( route( 'home' ) );
+        }
+
+        $user = User::query()->create( [
+            'name'     => $socialUser->getName() ?? $socialUser->getNickname() ?? $socialUser->getId(),
+            'email'    => $socialUser->getEmail(),
             'password' => bcrypt( str()->random( 20 ) ),
+        ] );
+
+        $user->social()->create( [
+            'social_id' => $socialUser->getId(),
+            'driver'    => $driver,
         ] );
 
         auth()->login( $user );

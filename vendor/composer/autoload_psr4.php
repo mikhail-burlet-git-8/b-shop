@@ -48,6 +48,8 @@ return array(
     'Spatie\\Ignition\\' => array($vendorDir . '/spatie/ignition/src'),
     'Spatie\\FlareClient\\' => array($vendorDir . '/spatie/flare-client-php/src'),
     'Spatie\\Backtrace\\' => array($vendorDir . '/spatie/backtrace/src'),
+    'SocialiteProviders\\VKontakte\\' => array($vendorDir . '/socialiteproviders/vkontakte'),
+    'SocialiteProviders\\Manager\\' => array($vendorDir . '/socialiteproviders/manager/src'),
     'Services\\' => array($baseDir . '/src/Services'),
     'Sentry\\' => array($vendorDir . '/sentry/sentry/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
