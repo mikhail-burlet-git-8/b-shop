@@ -12,11 +12,11 @@
 </head>
 <body>
 
-<x-flash></x-flash>
-@include('layout.parts.header')
+@include('shared.flash')
+@include('shared.header')
 @yield('content')
-@include('layout.parts.footer')
-@include('layout.parts.mobile_menu')
+@include('shared.footer')
+@include('shared.mobile_menu')
 </body>
 
 @vite([

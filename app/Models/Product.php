@@ -2,14 +2,20 @@
 
 namespace App\Models;
 
-use App\Traits\Models\HasSlug;
+use Domain\Catalog\Models\Brand;
+use Domain\Catalog\Models\Category;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Support\Casts\PriceCast;
+use Support\Traits\Models\HasSlug;
+use Support\Traits\Models\HasThumbnail;
 
 class Product extends Model {
     use HasFactory;
+    use HasThumbnail;
     use HasSlug;
 
     protected $fillable = [
@@ -19,7 +25,19 @@ class Product extends Model {
         'brand_id',
         'category_id',
         'price',
+        'on_home_page',
+        'sorting',
     ];
+
+    protected $casts = [
+        'price' => PriceCast::class
+    ];
+
+    public function scopeHomePage( Builder $query ) {
+        $query->where( 'on_home_page', true )
+              ->orderBy( 'sorting' )
+              ->limit( 8 );
+    }
 
     public function brand(): BelongsTo {
         return $this->belongsTo( Brand::class );
@@ -29,4 +47,7 @@ class Product extends Model {
         return $this->belongsToMany( Category::class );
     }
 
+    protected function thumbnailDir(): string {
+        return 'products';
+    }
 }
