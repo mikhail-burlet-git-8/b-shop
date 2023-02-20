@@ -11,7 +11,7 @@
     ])
 </head>
 <body>
-<x-flash></x-flash>
+@include('shared.flash')
 @yield('content')
 </body>
 
