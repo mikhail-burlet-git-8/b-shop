@@ -1,55 +1,55 @@
 {
-  "resources/fonts/Gilroy-Black.ttf": {
-    "file": "assets/Gilroy-Black-68176a37.ttf",
-    "src": "resources/fonts/Gilroy-Black.ttf"
-  },
   "resources/fonts/Gilroy-Black.woff2": {
     "file": "assets/Gilroy-Black-cf204b09.woff2",
     "src": "resources/fonts/Gilroy-Black.woff2"
   },
-  "resources/fonts/Gilroy-Medium.woff2": {
-    "file": "assets/Gilroy-Medium-e61f2165.woff2",
-    "src": "resources/fonts/Gilroy-Medium.woff2"
-  },
-  "resources/fonts/Gilroy-Medium.ttf": {
-    "file": "assets/Gilroy-Medium-ce8d455b.ttf",
-    "src": "resources/fonts/Gilroy-Medium.ttf"
+  "resources/fonts/Gilroy-Black.ttf": {
+    "file": "assets/Gilroy-Black-68176a37.ttf",
+    "src": "resources/fonts/Gilroy-Black.ttf"
   },
   "resources/fonts/Gilroy-Bold.woff2": {
     "file": "assets/Gilroy-Bold-05391b44.woff2",
     "src": "resources/fonts/Gilroy-Bold.woff2"
   },
-  "resources/fonts/Gilroy-Regular.ttf": {
-    "file": "assets/Gilroy-Regular-8bbb8f0f.ttf",
-    "src": "resources/fonts/Gilroy-Regular.ttf"
-  },
-  "resources/fonts/Gilroy-Regular.woff2": {
-    "file": "assets/Gilroy-Regular-8ae963ef.woff2",
-    "src": "resources/fonts/Gilroy-Regular.woff2"
+  "resources/fonts/Gilroy-Medium.woff2": {
+    "file": "assets/Gilroy-Medium-e61f2165.woff2",
+    "src": "resources/fonts/Gilroy-Medium.woff2"
   },
   "resources/fonts/Gilroy-Bold.ttf": {
     "file": "assets/Gilroy-Bold-ed3a99e5.ttf",
     "src": "resources/fonts/Gilroy-Bold.ttf"
   },
-  "resources/fonts/Gilroy-SemiBold.ttf": {
-    "file": "assets/Gilroy-SemiBold-32eb47df.ttf",
-    "src": "resources/fonts/Gilroy-SemiBold.ttf"
+  "resources/fonts/Gilroy-Medium.ttf": {
+    "file": "assets/Gilroy-Medium-ce8d455b.ttf",
+    "src": "resources/fonts/Gilroy-Medium.ttf"
+  },
+  "resources/fonts/Gilroy-Regular.woff2": {
+    "file": "assets/Gilroy-Regular-8ae963ef.woff2",
+    "src": "resources/fonts/Gilroy-Regular.woff2"
+  },
+  "resources/fonts/Gilroy-Regular.ttf": {
+    "file": "assets/Gilroy-Regular-8bbb8f0f.ttf",
+    "src": "resources/fonts/Gilroy-Regular.ttf"
   },
   "resources/images/apple-touch-icon.png": {
     "file": "assets/apple-touch-icon-e5c6dc60.png",
     "src": "resources/images/apple-touch-icon.png"
   },
-  "resources/fonts/Gilroy-SemiBold.woff2": {
-    "file": "assets/Gilroy-SemiBold-d8e57f7f.woff2",
-    "src": "resources/fonts/Gilroy-SemiBold.woff2"
-  },
   "resources/images/brands/1.png": {
     "file": "assets/1-381c2efc.png",
     "src": "resources/images/brands/1.png"
   },
+  "resources/fonts/Gilroy-SemiBold.ttf": {
+    "file": "assets/Gilroy-SemiBold-32eb47df.ttf",
+    "src": "resources/fonts/Gilroy-SemiBold.ttf"
+  },
   "resources/images/avatar.jpg": {
     "file": "assets/avatar-0a53be38.jpg",
     "src": "resources/images/avatar.jpg"
+  },
+  "resources/fonts/Gilroy-SemiBold.woff2": {
+    "file": "assets/Gilroy-SemiBold-d8e57f7f.woff2",
+    "src": "resources/fonts/Gilroy-SemiBold.woff2"
   },
   "resources/images/brands/3.png": {
     "file": "assets/3-d9c8f08c.png",
@@ -59,6 +59,10 @@
     "file": "assets/5-f0491d0b.png",
     "src": "resources/images/brands/5.png"
   },
+  "resources/images/brands/2.png": {
+    "file": "assets/2-bbced7fc.png",
+    "src": "resources/images/brands/2.png"
+  },
   "resources/images/brands/6.png": {
     "file": "assets/6-65e12f8d.png",
     "src": "resources/images/brands/6.png"
@@ -67,21 +71,9 @@
     "file": "assets/4-f0cfb0f0.png",
     "src": "resources/images/brands/4.png"
   },
-  "resources/images/brands/2.png": {
-    "file": "assets/2-bbced7fc.png",
-    "src": "resources/images/brands/2.png"
-  },
   "resources/images/emoji/man-pc.png": {
     "file": "assets/man-pc-e9645a0c.png",
     "src": "resources/images/emoji/man-pc.png"
-  },
-  "resources/images/favicon-32x32.png": {
-    "file": "assets/favicon-32x32-b063d93d.png",
-    "src": "resources/images/favicon-32x32.png"
-  },
-  "resources/images/favicon-16x16.png": {
-    "file": "assets/favicon-16x16-12c19cce.png",
-    "src": "resources/images/favicon-16x16.png"
   },
   "resources/images/favicon.ico": {
     "file": "assets/favicon-e3b0c442.ico",
@@ -127,13 +119,21 @@
     "file": "assets/youtube-d7f25e01.svg",
     "src": "resources/images/icons/youtube.svg"
   },
-  "resources/images/logo-dark.svg": {
-    "file": "assets/logo-dark-3ddd5cb8.svg",
-    "src": "resources/images/logo-dark.svg"
+  "resources/images/favicon-32x32.png": {
+    "file": "assets/favicon-32x32-b063d93d.png",
+    "src": "resources/images/favicon-32x32.png"
   },
   "resources/images/logo.svg": {
     "file": "assets/logo-8337a462.svg",
     "src": "resources/images/logo.svg"
+  },
+  "resources/images/favicon-16x16.png": {
+    "file": "assets/favicon-16x16-12c19cce.png",
+    "src": "resources/images/favicon-16x16.png"
+  },
+  "resources/images/logo-dark.svg": {
+    "file": "assets/logo-dark-3ddd5cb8.svg",
+    "src": "resources/images/logo-dark.svg"
   },
   "resources/images/products/1.jpg": {
     "file": "assets/1-f9b301cc.jpg",
@@ -151,29 +151,29 @@
     "file": "assets/4-2bf072e7.jpg",
     "src": "resources/images/products/4.jpg"
   },
-  "resources/images/products/6.jpg": {
-    "file": "assets/6-5e1c82bb.jpg",
-    "src": "resources/images/products/6.jpg"
-  },
   "resources/images/products/5.jpg": {
     "file": "assets/5-81b7bd98.jpg",
     "src": "resources/images/products/5.jpg"
   },
-  "resources/images/safari-pinned-tab.svg": {
-    "file": "assets/safari-pinned-tab-ddf47a37.svg",
-    "src": "resources/images/safari-pinned-tab.svg"
+  "resources/images/products/9.jpg": {
+    "file": "assets/9-55fafa46.jpg",
+    "src": "resources/images/products/9.jpg"
   },
   "resources/images/products/7.jpg": {
     "file": "assets/7-08e3d5a3.jpg",
     "src": "resources/images/products/7.jpg"
   },
+  "resources/images/safari-pinned-tab.svg": {
+    "file": "assets/safari-pinned-tab-ddf47a37.svg",
+    "src": "resources/images/safari-pinned-tab.svg"
+  },
+  "resources/images/products/6.jpg": {
+    "file": "assets/6-5e1c82bb.jpg",
+    "src": "resources/images/products/6.jpg"
+  },
   "resources/images/products/8.jpg": {
     "file": "assets/8-5c26c3d6.jpg",
     "src": "resources/images/products/8.jpg"
-  },
-  "resources/images/products/9.jpg": {
-    "file": "assets/9-55fafa46.jpg",
-    "src": "resources/images/products/9.jpg"
   },
   "resources/images/watermark.svg": {
     "file": "assets/watermark-86c52679.svg",
