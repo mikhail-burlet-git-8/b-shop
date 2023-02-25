@@ -9,15 +9,21 @@ use Support\Traits\Makeable;
 class CategoryViewModel {
     use Makeable;
 
-    public function homePage(): CategoryCollection|array {
+    public function homePage() {
         return cache()->rememberForever( 'category.home', function () {
-            return Category::query()->homePage()->get();
+            return Category::query()
+                           ->homePage()
+                           ->get();
         } );
     }
 
-    public function catalogPage(): CategoryCollection|array {
+    public function catalogPage() {
         return cache()->rememberForever( 'category.catalog', function () {
-            return Category::query()->catalogPage()->get();
+            return Category::query()
+                           ->select( [ 'thumbnail', 'id', 'title' ] )
+                           ->has( 'products' )
+                           ->catalogPage()
+                           ->get();
         } );
     }
 }

@@ -8,6 +8,7 @@
             <a href="#"
                class="inline-block text-white hover:text-pink">
                 {{$item->title}}
+
             </a></h3>
         <div class="mt-auto pt-6">
             <div class="mb-3 text-sm font-semibold">{{$item->price}}</div>

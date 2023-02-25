@@ -11,4 +11,9 @@ class BrandQueryBuilder extends Builder {
                     ->orderBy( 'sorting' )
                     ->limit( 6 );
     }
+
+    public function catalogPage(): BrandQueryBuilder {
+        return $this->select( [ 'id', 'title', 'slug' ] )
+                    ->orderBy( 'sorting' );
+    }
 }

@@ -32,11 +32,6 @@ class Category extends Model {
         return new CategoryQueryBuilder( $query );
     }
 
-
-    public function newCollection( array $models = [] ): CategoryCollection {
-        return new CategoryCollection( $models );
-    }
-
     public function products(): BelongsToMany {
         return $this->belongsToMany( Product::class );
     }

@@ -15,6 +15,7 @@ class ProductFactory extends Factory {
             //'thumbnail'    => $this->faker->loremflickr( 'images/products' ),
             'on_home_page' => $this->faker->boolean(),
             'sorting'      => $this->faker->numberBetween( 1, 900 ),
+            'text'         => $this->faker->realText(),
         ];
     }
 }

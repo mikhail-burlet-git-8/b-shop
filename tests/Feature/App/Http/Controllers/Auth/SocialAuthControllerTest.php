@@ -60,12 +60,13 @@ class SocialAuthControllerTest extends TestCase {
 
         $this->mockSocialiteCallback( $socialId );
 
-        $this->callbackRequest()->assertRedirect( route( 'home' ) );
+        $user = $this->callbackRequest();
+
+        $user->assertRedirect( route( 'home' ) );
 
         $this->assertAuthenticated();
 
         $this->assertDatabaseHas( 'social_auths', [ 'social_id' => $socialId ] );
-
     }
 
 
