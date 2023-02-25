@@ -12,7 +12,7 @@ final class CatalogRegistrar {
     public function map( Registrar $registrar ) {
         Route::middleware( 'web' )
              ->group( function () {
-                 Route::get( '/catalog', CatalogController::class )
+                 Route::get( '/catalog/{category:slug?}', CatalogController::class )
                       ->name( 'catalog' );
              } );
 

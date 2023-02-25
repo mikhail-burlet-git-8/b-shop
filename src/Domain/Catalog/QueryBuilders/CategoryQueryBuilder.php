@@ -11,4 +11,9 @@ class CategoryQueryBuilder extends Builder {
                     ->orderBy( 'sorting' )
                     ->limit( 10 );
     }
+
+    public function catalogPage(): CategoryQueryBuilder {
+        return $this->select( [ 'id', 'title', 'slug' ] )
+                    ->orderBy( 'sorting' );
+    }
 }

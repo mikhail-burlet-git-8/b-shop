@@ -13,6 +13,11 @@ return [
     |
     */
 
+    'allowed_driver' => [
+        'vkontakte',
+        'github',
+    ],
+
     'defaults' => [
         'guard'     => 'web',
         'passwords' => 'users',

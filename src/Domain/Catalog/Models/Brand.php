@@ -34,10 +34,6 @@ class Brand extends Model {
         return new BrandQueryBuilder( $query );
     }
 
-    public function newCollection( array $models = [] ): BrandCollection {
-        return new BrandCollection( $models );
-    }
-
     public function products(): HasMany {
         return $this->hasMany( Product::class );
     }

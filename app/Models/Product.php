@@ -27,16 +27,43 @@ class Product extends Model {
         'price',
         'on_home_page',
         'sorting',
+        'text',
     ];
 
     protected $casts = [
         'price' => PriceCast::class
     ];
 
+
     public function scopeHomePage( Builder $query ) {
         $query->where( 'on_home_page', true )
               ->orderBy( 'sorting' )
               ->limit( 8 );
+    }
+
+    public function scopeFiltered( Builder $query ) {
+
+        $query->when( request( 'filters.brands' ), function ( $q ) {
+            $q->whereIn( 'brand_id', request( 'filters.brands' ) );
+        } )->when( request( 'filters.price' ), function ( $q ) {
+            $q->whereBetween( 'price', [
+                request( 'filters.price.from', 0 ) * 100,
+                request( 'filters.price.to', 100000 ) * 100
+            ] );
+        } );
+    }
+
+    public function scopeSorted( Builder $query ) {
+
+        $query->when( request( 'sort' ), function ( $q ) {
+            $column = request()->str( 'sort' );
+
+            if ( $column->contains( [ 'price', 'title' ] ) ) {
+                $direction = $column->contains( '-' ) ? 'DESC' : 'ASC';
+
+                $q->orderBy( (string) $column->remove( '-' ), $direction );
+            }
+        } );
     }
 
     public function brand(): BelongsTo {

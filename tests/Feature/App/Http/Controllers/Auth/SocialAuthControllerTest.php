@@ -16,7 +16,7 @@ class SocialAuthControllerTest extends TestCase {
 
     private function mockSocialiteCallback( string|int $githubId ): MockInterface {
         $user = $this->mock( SocialiteUser::class, function ( MockInterface $mock ) use ( $githubId ) {
-            $mock->shouldReceive( 'getId' )->once()->andReturn( $githubId );
+            $mock->shouldReceive( 'getId' )->andReturn( $githubId );
             $mock->shouldReceive( 'getName' )->once()->andReturn( str()->random( 10 ) );
             $mock->shouldReceive( 'getEmail' )->once()->andReturn( 'mihail.burlet@gmail.com' );
         } );
@@ -35,6 +35,11 @@ class SocialAuthControllerTest extends TestCase {
              ->assertRedirectContains( 'github.com' );
     }
 
+    public function test_vk_redirect_success(): void {
+        $this->get( action( [ SocialAuthController::class, 'redirect' ], [ 'driver' => 'vkontakte' ] ) )
+             ->assertRedirectContains( 'vk.com' );
+    }
+
     public function test_driver_not_found_exception(): void {
         $this->expectException( DomainException::class );
 
@@ -49,18 +54,19 @@ class SocialAuthControllerTest extends TestCase {
     }
 
     public function test_github_callback_created_user_success(): void {
-        $githubId = str()->random( 10 );
+        $socialId = str()->random( 10 );
 
-        $this->assertDatabaseMissing( 'users', [ 'github_id' => $githubId ] );
+        $this->assertDatabaseMissing( 'social_auths', [ 'social_id' => $socialId ] );
 
-        $this->mockSocialiteCallback( $githubId );
+        $this->mockSocialiteCallback( $socialId );
 
-        $this->callbackRequest()->assertRedirect( route( 'home' ) );
+        $user = $this->callbackRequest();
+
+        $user->assertRedirect( route( 'home' ) );
 
         $this->assertAuthenticated();
 
-        $this->assertDatabaseHas( 'users', [ 'github_id' => $githubId ] );
-
+        $this->assertDatabaseHas( 'social_auths', [ 'social_id' => $socialId ] );
     }
 
 
