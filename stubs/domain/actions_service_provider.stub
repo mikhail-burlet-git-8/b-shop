@@ -1,0 +1,9 @@
+<?php
+
+namespace Domain\Auth\Actions;
+
+final class {{ class }}  {
+    public function __invoke(  ) {
+
+    }
+}

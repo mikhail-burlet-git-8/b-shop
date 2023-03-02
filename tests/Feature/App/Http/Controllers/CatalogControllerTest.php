@@ -3,14 +3,13 @@
 namespace Tests\Feature\App\Http\Controllers;
 
 use App\Http\Controllers\CatalogController;
-use App\Models\Product;
 use Database\Factories\BrandFactory;
 use Database\Factories\CategoryFactory;
 use Database\Factories\ProductFactory;
+use Domain\Product\Models\Product;
 use Tests\TestCase;
 
 class CatalogControllerTest extends TestCase {
-
 
     public function test_sorting_price_and_price_filtered(): void {
         $productLowPrice  = ProductFactory::new()->createOne( [
@@ -28,19 +27,15 @@ class CatalogControllerTest extends TestCase {
              ->assertViewHas( 'products.1', $productHighPrice );
     }
 
-    public function test_status(): void {
+    public function test_catalog_status(): void {
         BrandFactory::new()->count( 10 )->create();
         CategoryFactory::new()->count( 10 )
-                       ->has( Product::factory( rand( 10, 30 ) ) )
-                       ->create();
+                       ->has( ProductFactory::new()->count( rand( 10, 30 ) ) )->create();
 
-        $response = $this->get( action( [ CatalogController::class ] ) );
-        $response
-            ->assertViewHas( 'brands.0' )
-            ->assertViewHas( 'products.0' )
-            ->assertViewHas( 'categories.0' );
+        $this->get( action( [ CatalogController::class ] ) )
+             ->assertViewHas( 'products.0' )
+             ->assertViewHas( 'categories.0' );
     }
-
 
     public function test_sorting_title(): void {
         $product_1 = ProductFactory::new()->createOne( [

@@ -22,6 +22,8 @@ class RefreshCommand extends Command {
             '--seed' => true,
         ] );
 
+        $this->call( 'queue:work' );
+
         return self::SUCCESS;
     }
 }
