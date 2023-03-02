@@ -1,15 +1,15 @@
 {
-  "resources/fonts/Gilroy-Black.woff2": {
-    "file": "assets/Gilroy-Black-cf204b09.woff2",
-    "src": "resources/fonts/Gilroy-Black.woff2"
-  },
   "resources/fonts/Gilroy-Black.ttf": {
     "file": "assets/Gilroy-Black-68176a37.ttf",
     "src": "resources/fonts/Gilroy-Black.ttf"
   },
-  "resources/fonts/Gilroy-Medium.ttf": {
-    "file": "assets/Gilroy-Medium-ce8d455b.ttf",
-    "src": "resources/fonts/Gilroy-Medium.ttf"
+  "resources/fonts/Gilroy-Bold.woff2": {
+    "file": "assets/Gilroy-Bold-05391b44.woff2",
+    "src": "resources/fonts/Gilroy-Bold.woff2"
+  },
+  "resources/fonts/Gilroy-Black.woff2": {
+    "file": "assets/Gilroy-Black-cf204b09.woff2",
+    "src": "resources/fonts/Gilroy-Black.woff2"
   },
   "resources/fonts/Gilroy-Medium.woff2": {
     "file": "assets/Gilroy-Medium-e61f2165.woff2",
@@ -19,13 +19,9 @@
     "file": "assets/Gilroy-Bold-ed3a99e5.ttf",
     "src": "resources/fonts/Gilroy-Bold.ttf"
   },
-  "resources/fonts/Gilroy-Regular.ttf": {
-    "file": "assets/Gilroy-Regular-8bbb8f0f.ttf",
-    "src": "resources/fonts/Gilroy-Regular.ttf"
-  },
-  "resources/fonts/Gilroy-Bold.woff2": {
-    "file": "assets/Gilroy-Bold-05391b44.woff2",
-    "src": "resources/fonts/Gilroy-Bold.woff2"
+  "resources/fonts/Gilroy-Medium.ttf": {
+    "file": "assets/Gilroy-Medium-ce8d455b.ttf",
+    "src": "resources/fonts/Gilroy-Medium.ttf"
   },
   "resources/fonts/Gilroy-Regular.woff2": {
     "file": "assets/Gilroy-Regular-8ae963ef.woff2",
@@ -35,65 +31,65 @@
     "file": "assets/apple-touch-icon-e5c6dc60.png",
     "src": "resources/images/apple-touch-icon.png"
   },
-  "resources/fonts/Gilroy-SemiBold.woff2": {
-    "file": "assets/Gilroy-SemiBold-d8e57f7f.woff2",
-    "src": "resources/fonts/Gilroy-SemiBold.woff2"
+  "resources/fonts/Gilroy-SemiBold.ttf": {
+    "file": "assets/Gilroy-SemiBold-32eb47df.ttf",
+    "src": "resources/fonts/Gilroy-SemiBold.ttf"
   },
   "resources/images/avatar.jpg": {
     "file": "assets/avatar-0a53be38.jpg",
     "src": "resources/images/avatar.jpg"
   },
+  "resources/fonts/Gilroy-Regular.ttf": {
+    "file": "assets/Gilroy-Regular-8bbb8f0f.ttf",
+    "src": "resources/fonts/Gilroy-Regular.ttf"
+  },
   "resources/images/brands/1.png": {
     "file": "assets/1-381c2efc.png",
     "src": "resources/images/brands/1.png"
   },
-  "resources/fonts/Gilroy-SemiBold.ttf": {
-    "file": "assets/Gilroy-SemiBold-32eb47df.ttf",
-    "src": "resources/fonts/Gilroy-SemiBold.ttf"
-  },
-  "resources/images/brands/2.png": {
-    "file": "assets/2-bbced7fc.png",
-    "src": "resources/images/brands/2.png"
+  "resources/fonts/Gilroy-SemiBold.woff2": {
+    "file": "assets/Gilroy-SemiBold-d8e57f7f.woff2",
+    "src": "resources/fonts/Gilroy-SemiBold.woff2"
   },
   "resources/images/brands/5.png": {
     "file": "assets/5-f0491d0b.png",
     "src": "resources/images/brands/5.png"
   },
+  "resources/images/brands/6.png": {
+    "file": "assets/6-65e12f8d.png",
+    "src": "resources/images/brands/6.png"
+  },
   "resources/images/brands/3.png": {
     "file": "assets/3-d9c8f08c.png",
     "src": "resources/images/brands/3.png"
   },
-  "resources/images/brands/6.png": {
-    "file": "assets/6-65e12f8d.png",
-    "src": "resources/images/brands/6.png"
+  "resources/images/brands/2.png": {
+    "file": "assets/2-bbced7fc.png",
+    "src": "resources/images/brands/2.png"
   },
   "resources/images/brands/4.png": {
     "file": "assets/4-f0cfb0f0.png",
     "src": "resources/images/brands/4.png"
   },
-  "resources/images/favicon.ico": {
-    "file": "assets/favicon-e3b0c442.ico",
-    "src": "resources/images/favicon.ico"
-  },
   "resources/images/emoji/man-pc.png": {
     "file": "assets/man-pc-e9645a0c.png",
     "src": "resources/images/emoji/man-pc.png"
   },
-  "resources/images/favicon-16x16.png": {
-    "file": "assets/favicon-16x16-12c19cce.png",
-    "src": "resources/images/favicon-16x16.png"
+  "resources/images/favicon.ico": {
+    "file": "assets/favicon-e3b0c442.ico",
+    "src": "resources/images/favicon.ico"
+  },
+  "resources/images/favicon-32x32.png": {
+    "file": "assets/favicon-32x32-b063d93d.png",
+    "src": "resources/images/favicon-32x32.png"
   },
   "resources/images/icons/checked-white.svg": {
     "file": "assets/checked-white-e3fb40c7.svg",
     "src": "resources/images/icons/checked-white.svg"
   },
-  "resources/images/icons/checking.svg": {
-    "file": "assets/checking-b1a6b2c2.svg",
-    "src": "resources/images/icons/checking.svg"
-  },
-  "resources/images/favicon-32x32.png": {
-    "file": "assets/favicon-32x32-b063d93d.png",
-    "src": "resources/images/favicon-32x32.png"
+  "resources/images/favicon-16x16.png": {
+    "file": "assets/favicon-16x16-12c19cce.png",
+    "src": "resources/images/favicon-16x16.png"
   },
   "resources/images/icons/done.svg": {
     "file": "assets/done-1d3a970b.svg",
@@ -102,6 +98,10 @@
   "resources/images/icons/dropdown-arrow.svg": {
     "file": "assets/dropdown-arrow-dfa6ea0c.svg",
     "src": "resources/images/icons/dropdown-arrow.svg"
+  },
+  "resources/images/icons/checking.svg": {
+    "file": "assets/checking-b1a6b2c2.svg",
+    "src": "resources/images/icons/checking.svg"
   },
   "resources/images/icons/play.svg": {
     "file": "assets/play-3a9f99cd.svg",
@@ -159,13 +159,13 @@
     "file": "assets/6-5e1c82bb.jpg",
     "src": "resources/images/products/6.jpg"
   },
-  "resources/images/safari-pinned-tab.svg": {
-    "file": "assets/safari-pinned-tab-ddf47a37.svg",
-    "src": "resources/images/safari-pinned-tab.svg"
-  },
   "resources/images/products/9.jpg": {
     "file": "assets/9-55fafa46.jpg",
     "src": "resources/images/products/9.jpg"
+  },
+  "resources/images/safari-pinned-tab.svg": {
+    "file": "assets/safari-pinned-tab-ddf47a37.svg",
+    "src": "resources/images/safari-pinned-tab.svg"
   },
   "resources/images/products/7.jpg": {
     "file": "assets/7-08e3d5a3.jpg",
@@ -187,13 +187,13 @@
     "file": "assets/1-6de46ae8.png",
     "src": "resources/images/tasks/1.png"
   },
-  "resources/images/tasks/3.png": {
-    "file": "assets/3-1a3adc7c.png",
-    "src": "resources/images/tasks/3.png"
-  },
   "resources/images/tasks/4.png": {
     "file": "assets/4-45465e96.png",
     "src": "resources/images/tasks/4.png"
+  },
+  "resources/images/tasks/3.png": {
+    "file": "assets/3-1a3adc7c.png",
+    "src": "resources/images/tasks/3.png"
   },
   "resources/sass/main.sass": {
     "file": "assets/main-cfefacf0.css",
@@ -201,7 +201,7 @@
     "isEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-65bf7637.css",
+    "file": "assets/app-92a972bb.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
