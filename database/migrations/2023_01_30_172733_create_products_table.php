@@ -24,6 +24,10 @@ return new class extends Migration {
                   ->default( 0 );
             $table->unsignedInteger( 'old_price' )
                   ->default( 0 );
+            $table->unsignedInteger( 'purchase_price' )
+                  ->default( 0 );
+            $table->string( 'manufacturer_link' )
+                  ->nullable();
             $table->foreignIdFor( Brand::class )
                   ->nullable()
                   ->constrained()

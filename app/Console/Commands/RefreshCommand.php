@@ -22,7 +22,11 @@ class RefreshCommand extends Command {
             '--seed' => true,
         ] );
 
-        $this->call( 'queue:work' );
+        sleep( 5 );
+
+        $this->call( 'queue:work', [
+            '--stop-when-empty' => true
+        ] );
 
         return self::SUCCESS;
     }

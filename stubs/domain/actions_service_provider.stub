@@ -1,9 +1,12 @@
 <?php
 
-namespace Domain\Auth\Actions;
+namespace Domain\{{Domain}}\Providers;
 
-final class {{ class }}  {
-    public function __invoke(  ) {
+use Illuminate\Support\ServiceProvider;
 
-    }
+class ActionsServiceProvider extends ServiceProvider
+{
+    public array $bindings = [
+        //
+    ];
 }
