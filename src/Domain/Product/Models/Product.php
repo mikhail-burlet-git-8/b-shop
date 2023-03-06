@@ -39,6 +39,7 @@ class Product extends Model {
     protected $casts = [
         'price'           => PriceCast::class,
         'old_price'       => PriceCast::class,
+        'purchase_price'  => PriceCast::class,
         'json_properties' => 'array'
     ];
 
