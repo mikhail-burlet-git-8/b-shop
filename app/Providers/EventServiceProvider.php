@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\AfterSessionRegenrate;
 use App\Listeners\SendEmailNewUserListener;
+use Domain\Cart\CartManager;
 use Domain\Catalog\Models\Brand;
 use Domain\Catalog\Models\Category;
 use Domain\Catalog\Observers\BrandObserver;
@@ -11,6 +13,8 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use SocialiteProviders\Manager\SocialiteWasCalled;
+use SocialiteProviders\VKontakte\VKontakteExtendSocialite;
 
 class EventServiceProvider extends ServiceProvider {
     /**
@@ -19,12 +23,12 @@ class EventServiceProvider extends ServiceProvider {
      * @var array<class-string, array<int, class-string>>
      */
     protected $listen = [
-        Registered::class                                     => [
+        Registered::class         => [
             SendEmailVerificationNotification::class,
             SendEmailNewUserListener::class,
         ],
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            \SocialiteProviders\VKontakte\VKontakteExtendSocialite::class . '@handle',
+        SocialiteWasCalled::class => [
+            VKontakteExtendSocialite::class . '@handle',
         ],
     ];
 
@@ -34,6 +38,9 @@ class EventServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
+        Event::listen( AfterSessionRegenrate::class, function ( AfterSessionRegenrate $event ) {
+            cart()->updateStorageId( $event->old, $event->current );
+        } );
         Category::observe( CategoryObserver::class );
         Brand::observe( BrandObserver::class );
     }

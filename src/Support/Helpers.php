@@ -1,6 +1,7 @@
 <?php
 
 
+use Domain\Cart\CartManager;
 use Domain\Catalog\Filters\FilterManager;
 use Domain\Catalog\Models\Category;
 use Domain\Catalog\Sorters\Sorter;
@@ -9,6 +10,11 @@ use Support\Flash\Flash;
 if ( ! function_exists( '__money' ) ) {
     function __money( string $money, int $countDecimal = 2, string $symbol = '₽' ): string {
         return number_format( $money, $countDecimal, '.', ' ' ) . ' ' . $symbol;
+    }
+}
+if ( ! function_exists( 'cart' ) ) {
+    function cart(): CartManager {
+        return app( CartManager::class );
     }
 }
 if ( ! function_exists( 'flash' ) ) {

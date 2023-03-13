@@ -5,6 +5,7 @@ namespace Tests\Feature\App\Http\Controllers;
 use App\Http\Controllers\HomeController;
 use Database\Factories\BrandFactory;
 use Database\Factories\CategoryFactory;
+use Database\Factories\PostFactory;
 use Database\Factories\ProductFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -41,9 +42,14 @@ class HomeControllerTest extends TestCase {
             'sorting'      => 1,
         ] );
 
+        $post = PostFactory::new()->createOne( [
+            'on_home_page' => true,
+        ] );
+
         $this->get( action( [ HomeController::class ] ) )->assertOk()
              ->assertViewHas( 'products.0', $product )
              ->assertViewHas( 'categories.0', $category )
+             ->assertViewHas( 'posts.0', $post )
              ->assertViewHas( 'brands.0', $brand );
 
 
