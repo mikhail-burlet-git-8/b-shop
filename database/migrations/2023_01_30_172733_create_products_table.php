@@ -22,6 +22,8 @@ return new class extends Migration {
                   ->nullable();
             $table->unsignedInteger( 'price' )
                   ->default( 0 );
+            $table->unsignedInteger( 'quantity' )
+                  ->default( 0 );
             $table->unsignedInteger( 'old_price' )
                   ->default( 0 );
             $table->unsignedInteger( 'purchase_price' )

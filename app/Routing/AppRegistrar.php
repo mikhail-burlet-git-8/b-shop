@@ -2,13 +2,15 @@
 
 namespace App\Routing;
 
+use App\Contracts\RouteRegistrar;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThumbnailController;
+
 use Illuminate\Contracts\Routing\Registrar;
 use Illuminate\Support\Facades\Route;
 
-final class AppRegistrar {
-    public function map( Registrar $registrar ) {
+final class AppRegistrar implements RouteRegistrar {
+    public function map( Registrar $registrar ): void {
         Route::middleware( 'web' )
              ->group( function () {
                  Route::get( '/', HomeController::class )
@@ -19,7 +21,5 @@ final class AppRegistrar {
                       ->where( 'file', '.+\.(png|jpg|webp|jpeg)' )
                       ->name( 'thumbnail' );
              } );
-
-
     }
 }

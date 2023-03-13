@@ -69,7 +69,7 @@
                     @each('catalog.shared.product', $products, 'item')
                 </div>
                 <div class="mt-12 text-center">
-                    <a href="#" class="btn btn-purple">Все товары &nbsp;→</a>
+                    <a href="{{route('catalog')}}" class="btn btn-purple">Все товары &nbsp;→</a>
                 </div>
             </section>
 
@@ -77,6 +77,17 @@
                 <h2 class="text-lg lg:text-[42px] font-black">Бренды</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-6 gap-4 md:gap-8 mt-12">
                     @each('catalog.shared.brand', $brands, 'item')
+                </div>
+            </section>
+
+            <section class="mt-20">
+                <h2 class="text-lg lg:text-[42px] font-black">Статьи</h2>
+                <div class="grid grid-cols-3 md:grid-cols-3 2xl:grid-cols-3 gap-4 md:gap-8 mt-12">
+                    @each('posts.shared.post', $posts, 'item')
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="{{route('posts')}}" class="btn btn-purple">Все статьи &nbsp;→</a>
                 </div>
             </section>
 

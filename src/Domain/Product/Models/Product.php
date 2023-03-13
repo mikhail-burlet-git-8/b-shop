@@ -4,6 +4,7 @@ namespace Domain\Product\Models;
 
 use App\Filters\Sorting;
 use App\Jobs\ProductJsonProperties;
+use App\Models\Comment;
 use Domain\Catalog\Facades\Sorter;
 use Domain\Catalog\Models\Brand;
 use Domain\Catalog\Models\Category;
@@ -34,6 +35,7 @@ class Product extends Model {
         'sorting',
         'text',
         'json_properties',
+        'quantity',
     ];
 
     protected $casts = [
@@ -49,6 +51,10 @@ class Product extends Model {
         static::created( function ( Product $product ) {
             ProductJsonProperties::dispatch( $product )->delay( now()->addSeconds( 10 ) );
         } );
+    }
+
+    public function comments() {
+        $this->morphMany( Comment::class, 'commentable' );
     }
 
     public function newEloquentBuilder( $query ): ProductQueryBuilder {

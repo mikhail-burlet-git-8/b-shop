@@ -2,8 +2,6 @@
 
 namespace Domain\Catalog\ViewModels;
 
-use Domain\Catalog\Collections\BrandCollection;
-use Domain\Catalog\Collections\CategoryCollection;
 use Domain\Catalog\Models\Brand;
 use Support\Traits\Makeable;
 

@@ -3,10 +3,13 @@
 namespace App\Providers;
 
 use Carbon\CarbonInterval;
+use Domain\Post\Models\Post;
+use Domain\Product\Models\Product;
 use Faker\Factory;
 use Faker\Generator;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Services\Telegram\TelegramBotApi;
@@ -26,6 +29,11 @@ class AppServiceProvider extends ServiceProvider {
     }
 
     public function boot(): void {
+
+        Relation::enforceMorphMap( [
+            'post'    => Post::class,
+            'product' => Product::class,
+        ] );
 
         $this->app->bind( TelegramBotApiContract::class, TelegramBotApi::class );
 
