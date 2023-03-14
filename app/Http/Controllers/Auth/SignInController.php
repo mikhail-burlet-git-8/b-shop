@@ -24,6 +24,7 @@ class SignInController extends Controller {
             ] )->onlyInput( 'email' );
         }
 
+
         SessionRegenerator::run();
 
         return redirect()->intended( route( 'home' ) );

@@ -23,4 +23,12 @@ class PostViewModel {
                    ->where( 'status', 'published' )
                    ->paginate();
     }
+
+    public function show( $slug ) {
+        return cache()->rememberForever( 'post_' . $slug, function () use ( $slug ) {
+            return Post::query()
+                       ->where( 'slug', $slug )
+                       ->first();
+        } );
+    }
 }

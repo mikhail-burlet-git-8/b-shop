@@ -6,6 +6,7 @@ use App\Contracts\RouteRegistrar;
 use App\Routing\AppRegistrar;
 use App\Routing\CartRegistrar;
 use App\Routing\CatalogRegistrar;
+use App\Routing\OrderRegistrar;
 use App\Routing\PostRegistrar;
 use App\Routing\ProductRegistrar;
 use App\Routing\AuthRegistrar;
@@ -20,6 +21,7 @@ use Symfony\Component\HttpFoundation\Response;
 class RouteServiceProvider extends ServiceProvider {
 
     protected array $registrars = [
+        OrderRegistrar::class,
         AppRegistrar::class,
         PostRegistrar::class,
         CartRegistrar::class,

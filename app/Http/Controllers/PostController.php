@@ -16,7 +16,8 @@ class PostController extends Controller {
         return view( 'posts.posts', compact( 'posts' ) );
     }
 
-    public function show( Post $post ): Factory|View|Application {
+    public function show( $slug ): Factory|View|Application {
+        $post = PostViewModel::make()->show( $slug );
         if ( $post->status != 'published' ) {
             abort( 404 );
         }

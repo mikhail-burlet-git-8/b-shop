@@ -49,3 +49,13 @@ if ( ! function_exists( 'filter_url' ) ) {
         ] );
     }
 }
+
+if ( ! function_exists( '__cacheForget' ) ) {
+    function __cacheForget( $key, $slug = null ): void {
+        if ( ! is_null( $slug ) ) {
+            cache()->forget( $key . '_' . $slug );
+        }
+        cache()->forget( $key . '.home' );
+        cache()->forget( $key );
+    }
+}
